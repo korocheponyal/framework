@@ -7,7 +7,6 @@ $query = rtrim($_SERVER['QUERY_STRING'], '/');
 // Router::add('post/add', ['controller'=>'Posts', 'action'=>'add']);
 // Router::add('post', ['controller'=>'Posts', 'action'=>'index']);
 // Router::add(' ', ['controller'=>'Main', 'action'=>'index']);
-// Router::add(' ', ['controller'=>'Main', 'action'=>'index']);
 
 Router::add('^$', ['controller'=>'Main', 'action'=>'index']);
 Router::add('([a-z-]+)/([a-z-]+)');
