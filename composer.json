@@ -2,7 +2,7 @@
     "name": "fw/fw",
     "autoload": {
         "psr-4": {
-            "Fw\\Fw\\": "src/"
+            "Fw\\Fw\\": "app"
         }
     },
     "require": {}
