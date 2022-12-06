@@ -1,0 +1,9 @@
+{
+    "name": "fw/fw",
+    "autoload": {
+        "psr-4": {
+            "Fw\\Fw\\": "src/"
+        }
+    },
+    "require": {}
+}
