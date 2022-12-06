@@ -12,7 +12,7 @@ Router::add('^$', ['controller'=>'Main', 'action'=>'index']);
 Router::add('([a-z-]+)/([a-z-]+)');
 // d(Router::getRoutes());
 if(Router::matchRoute($query)){
-    // d(Router::getRoutes());
+     d(Router::getRoutes());
 
 } else {
     echo '404';
