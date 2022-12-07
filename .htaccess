@@ -2,3 +2,5 @@ RewriteEngine on
 RewriteBase /
 AddDefaultCharset utf-8
 RewriteRule ^(.*)$ /public/$1
+
+ы
