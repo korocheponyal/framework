@@ -1,5 +1,7 @@
 <?php
 
+namespace fw\core;
+
 class Router
 {
     protected static $routes = [];

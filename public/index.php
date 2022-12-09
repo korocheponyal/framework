@@ -1,7 +1,9 @@
 <?php
 
-require '../vendor/fw/core/Router.php';
+require_once '../vendor/autoload.php';
+//require '../vendor/fw/core/Router.php';
 require '../vendor/fw/libs/function.php';
+use fw\core\Router;
 
 $query = rtrim($_SERVER['QUERY_STRING'], '/');
 // Router::add('post/add', ['controller'=>'Posts', 'action'=>'add']);

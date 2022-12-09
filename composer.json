@@ -2,11 +2,10 @@
     "name": "fw/fw",
     "autoload": {
         "psr-4": {
-            "Fw\\Fw\\": "app"
-        }
+            "fw\\": "vendor/fw",
+            "app\\": "app"        }
     },
     "license": "proprietary",
     "description": "Senatorov",
     "require": {}
 }
-//sasas
