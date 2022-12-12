@@ -34,7 +34,7 @@ class Router
 
     public static function dispatch($url){
         if(self::matchRoute($url)){
-            $controller = self::$route['controller'];
+            $controller = 'app\controller\\' . self::$route['controller'];
             d($controller);
             if(class_exists($controller)){
                 echo "okey";
