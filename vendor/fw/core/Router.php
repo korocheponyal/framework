@@ -2,7 +2,6 @@
 
 namespace fw\core;
 
-
 class Router
 {
     protected static $routes = [];
@@ -36,11 +35,10 @@ class Router
     public static function dispatch($url){
         if(self::matchRoute($url)){
             $controller = 'app\controller\\' . self::$route['controller'];
-            d($controller);
             if(class_exists($controller)){
                 echo "okey";
             } else{
-                echo "$controller not found ";
+                echo "$controller <div style='color: red;'><b>not found</b></div>";
             }
         }else{
             http_response_code(404);
