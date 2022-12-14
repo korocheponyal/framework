@@ -11,5 +11,7 @@ namespace app\controller;
 
 class Posts
 {
-
+    public function indexAction(){
+        echo 'posts';
+    }
 }

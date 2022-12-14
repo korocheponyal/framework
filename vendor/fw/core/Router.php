@@ -12,13 +12,12 @@ class Router
     public static function getRoutes(){
         return self::$routes;
     }
-    public static function matchRoute($url){
+    private static function matchRoute($url){
         foreach(self::$routes as $pattern=>$route){
             if(preg_match("#$pattern#i",$url,$matches)){
                 foreach ($matches as $k=>$v){
                     if(is_string($k)){
                         $route[$k] = $v;
-                        d($route);
                     }
                 }
                 if(!isset($route['action'])){
@@ -32,12 +31,23 @@ class Router
         return false;
     }
 
+    /**
+     * redirect URL to correct route
+     * @param  string $url input URL
+     * @return void
+     */
     public static function dispatch($url){
         if(self::matchRoute($url)){
-            $controller = 'app\controller\\' . self::$route['controller'];
-            d($controller);
+
+            $controller = 'app\controller\\' . self::upperCamelCase(self::$route['controller']);
             if(class_exists($controller)){
-                echo "okey";
+                $cObj = new $controller;
+                $action = self::lowerCamelCase(self::$route['action']) . 'Action';
+              if(method_exists($cObj,$action)){
+                  $cObj->$action();
+              }else {
+                  echo "$controller::$action <div style='color: red;'><b>not found</b></div>";
+              }
             } else{
                 echo "$controller <div style='color: red;'><b>not found</b></div>";
             }
@@ -45,6 +55,17 @@ class Router
             http_response_code(404);
             include '404.php';
         }
+    }
+    protected static function upperCamelCase($name){
+         return str_replace(' ','',ucwords(str_replace('-',' ',$name)));
+
+    }
+    protected static function lowerCamelCase($name){
+        return lcfirst(self::upperCamelCase($name));
+
+
+
+
     }
 }
 
