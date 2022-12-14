@@ -1,9 +1,9 @@
 <?php
+
 use fw\core\Router;
 use app\controller\Main;
 require '../vendor/autoload.php';
 require '../vendor/fw/libs/function.php';
-//require '../app/controller/Main.php';
 
 $main = new Main;
 

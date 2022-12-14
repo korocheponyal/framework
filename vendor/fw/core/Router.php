@@ -39,7 +39,7 @@ class Router
             if(class_exists($controller)){
                 echo "okey";
             } else{
-                echo "$controller not found ";
+                echo "$controller <div style='color: red;'><b>not found</b></div>";
             }
         }else{
             http_response_code(404);
