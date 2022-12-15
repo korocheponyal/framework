@@ -7,24 +7,16 @@
  */
 
 namespace app\controller;
+use \fw\core\base\Controller;
 
-
-
-
-class Posts extends \fw\core\base\Controller
+class Posts extends Controller
 {
-    public $route = [];
-    public function __construct($route)
-    {
-        $this->route = $route;
-    }
 
     public function indexAction(){
-        $this->route;
+        echo 'indexAction';
     }
     public function testAction(){
-        echo 'w';
-        $this->route;
+        echo 'testAction';
     }
 
 }

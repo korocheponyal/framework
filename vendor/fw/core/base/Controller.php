@@ -17,10 +17,8 @@ abstract class Controller
     {
         $this->route = $route;
         $this->view = $route['action'];
-        d($route['controller']);
-        d($this->view);
         include APP . "/view/{$route['controller']}/{$this->view}.php";
-//        d(APP . "/view/{$route['controller']}/{$this->view}.php");
+
     }
 
 
