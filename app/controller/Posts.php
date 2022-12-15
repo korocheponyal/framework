@@ -9,9 +9,22 @@
 namespace app\controller;
 
 
-class Posts
+
+
+class Posts extends \fw\core\base\Controller
 {
-    public function indexAction(){
-        echo 'posts';
+    public $route = [];
+    public function __construct($route)
+    {
+        $this->route = $route;
     }
+
+    public function indexAction(){
+        $this->route;
+    }
+    public function testAction(){
+        echo 'w';
+        $this->route;
+    }
+
 }

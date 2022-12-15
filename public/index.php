@@ -1,5 +1,6 @@
 <?php
 
+error_reporting(-1);
 use fw\core\Router;
 use app\controller\Main;
 require '../vendor/autoload.php';
@@ -8,7 +9,7 @@ define('WWW', __DIR__);
 define('CORE', dirname(__DIR__) . '/vendor/core');
 define('ROOT', dirname(__DIR__));
 define('APP', dirname(__DIR__) . '/app');
-
+d(APP);
 
 
 $query = rtrim($_SERVER['QUERY_STRING'], '/');
