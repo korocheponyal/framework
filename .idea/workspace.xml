@@ -119,9 +119,9 @@
       <path value="$PROJECT_DIR$/vendor/fw/core" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="326" />
-    <option name="y" value="56" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="162" />
+    <option name="y" value="60" />
     <option name="width" value="1505" />
     <option name="height" value="885" />
   </component>
