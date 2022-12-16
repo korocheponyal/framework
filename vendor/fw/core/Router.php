@@ -38,8 +38,9 @@ class Router
      * @return void
      */
     public static function dispatch($url){
+        $url = self::rewoveQueryString($url);
+        d($url);
         if(self::matchRoute($url)){
-
             $controller = 'app\controller\\' . self::$route['controller'];
             if(class_exists($controller)){
                 $cObj = new $controller(self::$route);
@@ -63,9 +64,17 @@ class Router
     }
     protected static function lowerCamelCase($name){
         return lcfirst(self::upperCamelCase($name));
+    }
 
-
-
+    protected static function rewoveQueryString($url){
+        if($url){
+            $params = explode('&', $url, 2);
+            if(!strpos($params['0'],'=')){
+                return rtrim($params['0'],'/');
+            }else{
+                return '';
+            }
+        }
 
     }
 }

@@ -13,9 +13,12 @@ define('APP', dirname(__DIR__) . '/app');
 
 $query = rtrim($_SERVER['QUERY_STRING'], '/');
 
-Router::add('^pages/?(?P<action>[a-z-]+)?$',['controller'=>'Posts']);
+//Router::add('^pages/?(?P<action>[a-z-]+)?$',['controller'=>'Posts']);
+Router::add('^page/(?P<action>[a-z-]+)/(?P<alias>[a-z-]+)$',['controller'=>'Page']);
+Router::add('^page/(?P<alias>[a-z-]+)$',['controller'=>'Page', 'action'=>'view']);
 Router::add('^$', ['controller'=>'Main', 'action'=>'index']);
 //d(Router::getRoutes());
+//d($_GET);
 Router::add('^(?P<controller>[a-z-]+)/?(?P<action>[a-z-]+)?$');
 //d(Router::getRoutes());
 Router::dispatch($query);
