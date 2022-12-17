@@ -13,8 +13,6 @@ use fw\core\base\Controller;
 
 class Page extends Controller{
 public function viewAction(){
-    echo 'PageView';
-    d($this->route);
-    d($_GET);
+
     }
 }

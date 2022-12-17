@@ -9,19 +9,21 @@
 namespace app\controller;
 
 
-class PostsNew
+use fw\core\base\Controller;
+
+class PostsNew extends Controller
 {
     public function indexAction()
     {
-        echo 'postnew';
+
     }
 
     public function testAction()
     {
-    echo 'test';
+
     }
     public function testPageAction()
     {
-        echo 'testpage';
+        
     }
 }

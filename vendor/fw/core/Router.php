@@ -39,7 +39,7 @@ class Router
      */
     public static function dispatch($url){
         $url = self::rewoveQueryString($url);
-        d($url);
+//        d($url);
         if(self::matchRoute($url)){
             $controller = 'app\controller\\' . self::$route['controller'];
             if(class_exists($controller)){
@@ -47,6 +47,7 @@ class Router
                 $action = self::lowerCamelCase(self::$route['action']) . 'Action';
               if(method_exists($cObj,$action)){
                   $cObj->$action();
+                  $cObj->getView();
               }else {
                   echo "$controller::$action <div style='color: red;'><b>not found</b></div>";
               }

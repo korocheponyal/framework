@@ -9,10 +9,11 @@
 namespace app\controller;
 
 
-class Main
+use fw\core\base\Controller;
+
+class Main extends Controller
 {
     public function indexAction(){
-        echo 'Main';
     }
 }
 

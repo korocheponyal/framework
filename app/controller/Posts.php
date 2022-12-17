@@ -13,10 +13,10 @@ class Posts extends Controller
 {
 
     public function indexAction(){
-        echo 'indexAction';
+
     }
     public function testAction(){
-        echo 'testAction';
+
     }
 
 }
