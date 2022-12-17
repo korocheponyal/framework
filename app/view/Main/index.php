@@ -1,1 +1,1 @@
-<h1>heolllloe</h1>
+<h1><?= $name; ?></h1>
