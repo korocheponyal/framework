@@ -17,7 +17,11 @@ class Db
     protected function __construct()
     {
         $db = require ROOT . 'config/config_db.php';
-        $this->pdo = new \PDO($db['dsn'], $db['user'], $db['password']);
+         try {
+            $this->pdo = new \PDO($db['dsn'], $db['user'], $db['password']);
+        } catch(PDOException $e) {
+            echo $e->getMessage();
+        }
     }
 
     public static function instans(){
