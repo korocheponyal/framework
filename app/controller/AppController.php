@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: user
- * Date: 16.12.2022
- * Time: 22:24
+ * Date: 21.12.2022
+ * Time: 20:16
  */
 
 namespace app\controller;
@@ -11,8 +11,7 @@ namespace app\controller;
 
 use fw\core\base\Controller;
 
-class Page extends Controller{
-public function viewAction(){
+class AppController extends Controller
+{
 
-    }
 }

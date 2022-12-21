@@ -2,7 +2,7 @@
 
 error_reporting(-1);
 use fw\core\Router;
-use app\controller\Main;
+use app\controller\MainController;
 require '../vendor/autoload.php';
 require '../vendor/fw/libs/function.php';
 define('WWW', __DIR__);
@@ -14,7 +14,7 @@ define('LAYOUT', 'default');
 
 $query = rtrim($_SERVER['QUERY_STRING'], '/');
 
-//Router::add('^pages/?(?P<action>[a-z-]+)?$',['controller'=>'Posts']);
+//Router::add('^pages/?(?P<action>[a-z-]+)?$',['controller'=>'PostsController']);
 Router::add('^page/(?P<action>[a-z-]+)/(?P<alias>[a-z-]+)$',['controller'=>'Page']);
 Router::add('^page/(?P<alias>[a-z-]+)$',['controller'=>'Page', 'action'=>'view']);
 Router::add('^$', ['controller'=>'Main', 'action'=>'index']);

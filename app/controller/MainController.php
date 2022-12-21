@@ -9,9 +9,8 @@
 namespace app\controller;
 
 
-use fw\core\base\Controller;
 
-class Main extends Controller
+class MainController extends AppController
 {
 //    public $layout = 'default';
     public function indexAction(){

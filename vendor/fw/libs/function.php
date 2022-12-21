@@ -1,7 +1,7 @@
 <?php
 
 function d($data){
-    echo '<pre>';  
+    echo '<pre>';
     var_dump($data);
     echo '</pre><hr><br>';
 }

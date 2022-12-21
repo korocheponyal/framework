@@ -7,9 +7,9 @@
  */
 
 namespace app\controller;
-use \fw\core\base\Controller;
 
-class Posts extends Controller
+
+class PostsController extends AppController
 {
 
     public function indexAction(){

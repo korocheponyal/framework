@@ -9,9 +9,7 @@
 namespace app\controller;
 
 
-use fw\core\base\Controller;
-
-class PostsNew extends Controller
+class PostsNewController extends AppController
 {
     public function indexAction()
     {
