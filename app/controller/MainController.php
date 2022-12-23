@@ -9,6 +9,8 @@
 namespace app\controller;
 
 
+use app\model\Main;
+
 
 class MainController extends AppController
 {
@@ -16,8 +18,10 @@ class MainController extends AppController
     public function indexAction(){
 //    $this->layout = false;
 //    $this->view = 'Test';
-//echo 'test';
+    $model = new Main();
        $name = 'ruslan';
+       $res = $model->query("SELECT * FROM `posts`");
+        d($res);
        $this->set(compact('name'));
 
     }

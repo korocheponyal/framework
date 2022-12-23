@@ -12,11 +12,11 @@ namespace fw\core;
 class Db
 {
     protected $pdo;
-    protected static $instans;
+    protected static $instance;
 
     protected function __construct()
     {
-        $db = require ROOT . 'config/config_db.php';
+        $db = require ROOT . '/config/config_db.php';
          try {
             $this->pdo = new \PDO($db['dsn'], $db['user'], $db['password']);
         } catch(PDOException $e) {
@@ -24,12 +24,12 @@ class Db
         }
     }
 
-    public static function instans(){
-        if(self::$instans === NULL){
-            self::$instans = new self();
+    public static function instance(){
+        if(self::$instance === NULL){
+            self::$instance = new self();
 
         }
-    return self::$instans;
+    return self::$instance;
     }
 
     public function execute($sql){
