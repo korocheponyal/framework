@@ -20,3 +20,11 @@ class_exsist
 mysql
 join,having,вложенные вопросы,выборка из нескольких таблиц,like,set.
 github sql ,оконные функции
+
+25.12
+
+ДЗ на утро
+
+расскажешь что такое подготовка запросов
+
+https://stackoverflow.com/questions/10863598/mysql-php-pdo-prepared-statements-performance-issues-vs-security
