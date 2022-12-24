@@ -7,7 +7,7 @@
  */
 
 return [
-'dsn' => "mysql:host=localhost;dbname=test",
+'dsn' => "mysql:host=localhost;dbname=fw",
 'user'=>'root',
     'password'=>''
 ];

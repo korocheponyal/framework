@@ -30,7 +30,7 @@ public function query($sql){
 public function findAll()
 {
     $sql = "SELECT * FROM {$this->table}";
-    return $this->pdo->execute($sql);
+    return $this->pdo->query($sql);
 }
 
 }
