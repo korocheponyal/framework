@@ -13,7 +13,6 @@ define('LAYOUT', 'default');
 
 
 $query = rtrim($_SERVER['QUERY_STRING'], '/');
-
 //Router::add('^pages/?(?P<action>[a-z-]+)?$',['controller'=>'PostsController']);
 Router::add('^page/(?P<action>[a-z-]+)/(?P<alias>[a-z-]+)$',['controller'=>'Page']);
 Router::add('^page/(?P<alias>[a-z-]+)$',['controller'=>'Page', 'action'=>'view']);
