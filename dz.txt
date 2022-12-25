@@ -31,4 +31,4 @@ github sql ,оконные функции
 
 https://stackoverflow.com/questions/10863598/mysql-php-pdo-prepared-statements-performance-issues-vs-security
 
-подпишись на канал
+подпишись на английский канал
