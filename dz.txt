@@ -31,4 +31,8 @@ github sql ,оконные функции
 
 https://stackoverflow.com/questions/10863598/mysql-php-pdo-prepared-statements-performance-issues-vs-security
 
-подпишись на английский канал
+27.12.2022
+
+https://redbeanphp.com/index.php
+
+повторить всё что было!
