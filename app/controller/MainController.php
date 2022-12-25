@@ -26,6 +26,7 @@ class MainController extends AppController
        d($get_res);
        $this->set(compact('name'));
 
+       
     }
 
 }
