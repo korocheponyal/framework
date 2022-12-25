@@ -20,8 +20,9 @@ class PostsNewController extends AppController
     {
 
     }
+
     public function testPageAction()
     {
-        
+
     }
 }

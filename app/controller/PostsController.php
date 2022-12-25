@@ -12,10 +12,13 @@ namespace app\controller;
 class PostsController extends AppController
 {
 
-    public function indexAction(){
+    public function indexAction()
+    {
 
     }
-    public function testAction(){
+
+    public function testAction()
+    {
 
     }
 

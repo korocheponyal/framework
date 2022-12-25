@@ -9,8 +9,10 @@
 namespace app\controller;
 
 
-class PageController extends AppController {
-public function viewAction(){
+class PageController extends AppController
+{
+    public function viewAction()
+    {
 
     }
 }

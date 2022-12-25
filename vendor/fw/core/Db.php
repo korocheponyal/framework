@@ -44,7 +44,7 @@ class Db
         $stmt = $this->pdo->prepare($sql);
         $res = $stmt->execute();
         if ($res !== FALSE) {
-            return $stmt->fetchAll();
+            return $stmt->fetchAll(\PDO::FETCH_ASSOC);
         }
         return [];
     }

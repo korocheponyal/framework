@@ -9,38 +9,41 @@
 namespace fw\core\base;
 
 
-class View{
+class View
+{
     public $route = [];
     public $layout;//шаблон
     public $view;//вид
 
-    public function __construct($route,$layout = '',$view = ''){
+    public function __construct($route, $layout = '', $view = '')
+    {
         $this->route = $route;
-        if(false === $layout){
+        if (false === $layout) {
             $this->layout = false;
-        }else{
+        } else {
             $this->layout = $layout ?: LAYOUT;
         }
 
         $this->view = $view;
     }
 
-    public function render($vars){
+    public function render($vars)
+    {
         extract($vars);
         d($vars);
         $file_view = APP . "/view/{$this->route['controller']}/{$this->view}.php";
         ob_start();
-        if(file_exists($file_view)){
+        if (file_exists($file_view)) {
             require $file_view;
-        }else{
+        } else {
             echo "$file_view not found";
         }
         $content = ob_get_clean();
-        if(false !== $this->layout){
+        if (false !== $this->layout) {
             $file_layout = APP . "/view/layouts/{$this->layout}.php";
-            if(file_exists($file_layout)){
+            if (file_exists($file_layout)) {
                 require $file_layout;
-            }else {
+            } else {
                 echo "$file_layout not found";
             }
         }
