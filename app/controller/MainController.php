@@ -20,7 +20,6 @@ class MainController extends AppController
 //    $this->layout = false;
 //    $this->view = 'Test';
         $model = new Main();
-        d($model);
         $name = 'ruslan';
         $this->set(compact('name'));
         $res2 = $model->query("SELECT * FROM `posts`");
