@@ -24,7 +24,19 @@ class MainController extends AppController
         $this->set(compact('name'));
         $res2 = $model->query("SELECT * FROM `posts`");
         $res = $model->findAll();
-        d($res);
+        if(@$_POST['text']){
+            echo json_encode($res[0]);
+            die();
+        }
+    }
+    public function getAjaxAction(){
+        if(@$_POST['text']){
+
+            echo json_encode(["rus" => "HELLO WORLD"]);
+            die();
+        }
+
+
     }
 }
 

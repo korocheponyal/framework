@@ -30,7 +30,7 @@ class View
     public function render($vars)
     {
         extract($vars);
-        d($vars);
+//        d($vars);
         $file_view = APP . "/view/{$this->route['controller']}/{$this->view}.php";
         ob_start();
         if (file_exists($file_view)) {

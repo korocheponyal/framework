@@ -1,6 +1,6 @@
 <?php
 
-error_reporting(-1);
+error_reporting(-1); // Добавлять в отчёт все ошибки PHP
 
 use fw\core\Router;
 use app\controller\MainController;
@@ -24,7 +24,6 @@ Router::add('^$', ['controller' => 'Main', 'action' => 'index']);
 Router::add('^(?P<controller>[a-z-]+)/?(?P<action>[a-z-]+)?$');
 //d(Router::getRoutes());
 Router::dispatch($query);
-
 
 
 
